@@ -6,6 +6,7 @@
 
 ## Reccomended
 - OpenCOBOL IDE: https://launchpad.net/cobcide/+download
+- jq: https://stedolan.github.io/jq/
 
 ## Notes
 Direct download to gnuCobol compiler:  https:/cdn.kukiel.dev/gnucobol-2.2.tar.gz
@@ -18,7 +19,17 @@ $ ./build.sh {manifestName}
 Package "lambda-cobol-{manifestName}.zip" will be created.
 
 ## SAM Usage
-TBC
+You can run this API locally once you have build the demo with SAM usage:
+
+```
+sam local start-api
+``` 
+If everythign worked you will see:
+
+
+In a second terminal execute:
+
+
 
 ## Demo 
 [Demo URL - Function 1:](https://fe9yjg76ei.execute-api.ap-southeast-2.amazonaws.com/Prod/function1)

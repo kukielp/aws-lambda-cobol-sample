@@ -5,6 +5,7 @@ RUN yum -y groupinstall "Development tools"
 
 # install GnuCOBOL 2.2
 RUN yum -y install gmp-devel ncurses-devel db4-devel
+# Original URL was unreliable in the build, moved to a copy of gnucobol at my persoanl CDN
 RUN curl -L -o gnucobol-2.2.tar.gz https:/cdn.kukiel.dev/gnucobol-2.2.tar.gz
 RUN tar zxf gnucobol-2.2.tar.gz
 RUN cd gnucobol-2.2 && ./configure --prefix=/usr --libdir=/usr/lib64 && make && make install
@@ -25,8 +26,10 @@ RUN cp /usr/lib64/libcob.so.4 \
        /lib64/libpthread.so.0 \
        /lib64/ld-linux-x86-64.so.2 \
        /cobol/lib
+# Compile the pragram(s)
 SHELL ["/bin/bash", "-c"]
 RUN ./compile.sh
+# Zip it all up
 RUN cd /cobol && zip -r /lambda-cobol-runner.zip ./bootstrap ./lib && \
       cd binaries && \
       zip -ru -D /lambda-cobol-runner.zip *
