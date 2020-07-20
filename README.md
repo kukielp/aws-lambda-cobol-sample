@@ -36,4 +36,4 @@ In a second terminal execute:
 
 [Demo URL - Function 2:](https://fe9yjg76ei.execute-api.ap-southeast-2.amazonaws.com/Prod/function2)
 
-![COBOL](/cobol.png "COBOL")
+![COBOL](https://cdn.kukiel.dev/cobol-book.jpg "COBOL")
