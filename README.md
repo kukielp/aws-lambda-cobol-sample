@@ -9,7 +9,7 @@
 - jq: https://stedolan.github.io/jq/
 
 ## Notes
-Direct download to gnuCobol compiler:  https:/cdn.kukiel.dev/gnucobol-2.2.tar.gz
+Direct download to gnuCobol compiler:  https://cdn.kukiel.dev/gnucobol-2.2.tar.gz
 
 ## Build
 
